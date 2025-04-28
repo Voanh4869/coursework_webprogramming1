@@ -1,0 +1,792 @@
+/* Header Container */
+.header-nav-container {
+    height: 100px; /* Add this */
+    padding: 0 40px; /* Remove top-bottom padding */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f5f5f5;
+    position: fixed;
+    top: 0;
+    width: 95%;
+    z-index: 999;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    padding-top: 90px; 
+    overflow-y: scroll; 
+    scrollbar-width: none; 
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Site Title (Logo) */
+.site-title {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+/* Navigation Container */
+.nav-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Navigation Links */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Navigation Links */
+nav a {
+    text-decoration: none;
+    color: #000; /* Default black text */
+    font-size: 16px;
+    font-weight: 500;
+    position: relative; /* Needed for underline effect */
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+/* Active Navigation Tab */
+nav a.active-tab {
+    font-weight: bold;
+    color: #007BFF; /* Highlight color */
+    text-decoration: none;
+    background-color: #f0f8ff; /* Light background for active tab */
+    border-radius: 8px; /* Rounded corners for active tab */
+    padding: 8px 12px; /* Add padding for better appearance */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Effect */
+nav a:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+
+/* Underline Effect on Hover */
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: #007bff; /* Match text color */
+    transform: scaleX(0); /* Initially hidden */
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Show underline on hover */
+nav a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Sign-in Buttons */
+.signIN-buttons {
+    margin-left: 30px; /* Space between nav links and buttons */
+}
+
+.btn {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+/* Login Button */
+.login-btn {
+    background-color: #000;
+    color: white;
+}
+
+.login-btn:hover {
+    background-color: #333; /* Darker black on hover */
+}
+
+/* Logout Button */
+.logout-btn {
+    background-color: red;
+    color: white;
+}
+
+.logout-btn:hover {
+    background-color: darkred;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #4895e2; /* Light gray background */
+    color: #333; /* Dark text for contrast */
+    text-align: center;
+    padding: 15px 40px;
+    font-size: 15px;
+    font-weight: 500;
+    border-top: 2px solid #ddd; /* Subtle top border */
+    position: relative; /* Keeps it at the bottom */
+    /* width: 100%; */
+    bottom: 0;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    footer {
+        font-size: 12px;
+        padding: 10px;
+    }
+}
+
+
+
+/* Edit Post Form Container */
+.edit-post-container {
+    max-width: 600px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Title */
+.edit-post-container h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Form Labels */
+.edit-post-container label {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* Form Inputs */
+.edit-post-container input[type="text"],
+.edit-post-container textarea,
+.edit-post-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* Textarea Styling */
+.edit-post-container textarea {
+    resize: vertical;
+}
+
+/* File Upload Input */
+.edit-post-container input[type="file"] {
+    margin-bottom: 15px;
+}
+
+/* Current Image Styling */
+.edit-post-container img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Submit Button */
+.edit-post-container button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-post-container button[type="submit"]:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Add Post Form Container */
+.form-container {
+    max-width: 600px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Title */
+.form-container h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Form Labels */
+.form-container label {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* Form Inputs */
+.form-container input[type="text"],
+.form-container textarea,
+.form-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* Textarea Styling */
+.form-container textarea {
+    resize: vertical;
+}
+
+/* File Upload Input */
+.form-container input[type="file"] {
+    margin-bottom: 15px;
+}
+
+/* Submit Button */
+.form-container button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff; /* Blue background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-container button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Homepage Container */
+.homepage-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Welcome Message */
+.homepage-container h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #007bff; /* Blue color for emphasis */
+}
+
+/* Description Paragraph */
+.homepage-container p {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Admin Dashboard Section */
+.admin-dashboard {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.admin-dashboard h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.admin-dashboard ul {
+    list-style: none;
+    padding: 0;
+}
+
+.admin-dashboard ul li {
+    margin-bottom: 10px;
+}
+
+.admin-dashboard ul li a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.admin-dashboard ul li a:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+
+/* User Dashboard Section */
+.user-dashboard {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.user-dashboard h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.user-dashboard ul {
+    list-style: none;
+    padding: 0;
+}
+
+.user-dashboard ul li {
+    margin-bottom: 10px;
+}
+
+.user-dashboard ul li a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.user-dashboard ul li a:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+
+/* Guest Section */
+.guest-section {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.guest-section h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.guest-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.guest-section .btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.guest-section .btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+/* Post Card Container */
+.post-container {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid with a minimum card width */
+    gap: 20px; /* Space between posts */
+    justify-content: center;
+    margin: 40px auto; /* Center the grid and add vertical spacing */
+    max-width: 1200px; /* Optional: Limit the maximum width of the grid */
+}
+
+/* Post Card Styles */
+.post-card {
+    background: #fff;
+    border-radius: 15px; /* Slightly rounded corners for a modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    cursor: pointer;
+}
+
+.post-card:hover {
+    transform: translateY(-10px); /* Lift the card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+/* Post User Info */
+.post-user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.post-user__image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.post-user-info h5 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Post Card Header */
+.post-card__header {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+/* Post Card Body */
+.post-card__body {
+    padding: 20px; 
+    text-align: left; 
+}
+
+.post-card__body h4 {
+    margin: 15px 0; 
+    font-size: 22px; 
+    font-weight: bold;
+    color: #333; /* Darker color for better readability */
+}
+
+.post-card__body p {
+    font-size: 18px; /* Increase font size for the content */
+    color: #444; /* Slightly darker text for better contrast */
+    margin-bottom: 20px; /* Add more spacing below the content */
+}
+
+/* Post Card Image */
+.post-card__image {
+    width: 100%; /* Adjust to fit the card width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.post-comments-count {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #555;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+
+/* Post Card Footer */
+.post-card__footer {
+    display: block; /* Stack elements vertically */
+    padding: 20px;
+    border-top: 1px solid #eee;
+}
+
+.post-card__footer small {
+    display: block; /* Ensure the date is on its own line */
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* Post Tag Styles */
+.post-tag {
+display: inline-block;
+    background: #3498db;
+    color: #fff;
+    border-radius: 50px;
+    font-size: 12px;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    margin-top: 10px; /* Add spacing above the tag */
+}
+
+/* Post Action Buttons */
+.post-action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Increase space between buttons */
+    margin-top: 10px;
+}
+
+.post-inline-form {
+    display: inline-block;
+}
+
+.post-action-buttons .post-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.post-action-buttons .post-edit-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.post-action-buttons .post-delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.post-action-buttons .post-btn:hover {
+    opacity: 0.8;
+}
+
+/* Full Post Card Styles */
+.fullpost-card {
+    background: #fff;
+    border-radius: 15px; /* Match the rounded corners of the post card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    overflow: hidden;
+    width: 70%; /* Adjust width for better layout */
+    max-width: 800px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Full Post Card Header */
+.fullpost-card__header {
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.fullpost-user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.fullpost-user__image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.fullpost-user-info h5 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Full Post Card Body */
+.fullpost-card__body {
+    flex: 2; /* Take up two parts of the available space */
+    padding-left: 20px; /* Add spacing on the left */
+    padding: 20px;
+    text-align: left;
+}
+
+.fullpost-card__body h4 {
+    margin: 10px 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.fullpost-card__body p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.fullpost-tag {
+    display: inline-block;
+    background: #3498db;
+    color: #fff;
+    border-radius: 50px;
+    font-size: 12px;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    margin-top: 10px; /* Add spacing above the tag */
+}
+
+/* Full Post Card Image */
+.fullpost-card__image {
+    width: 100%; /* Adjust to fit the card width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.fullpost-card__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align everything to the left */
+    gap: 30px;
+    padding: 20px;
+    border-top: 1px solid #eee;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto; /* Center the post card on the page */
+}
+
+/* Comments section layout */
+.fullpost-comments-section {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Reduce the gap between individual comments */
+    margin-top: 5px; /* Reduce the margin above the comments section */
+}
+
+/* Comment Box */
+.fullpost-comment-box {
+    background: #f9f9f9;
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    max-width: 700px; /* Limit width to make it smaller */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* subtle shadow */
+}
+
+/* Username */
+.fullpost-comment-box strong {
+    font-size: 13px;
+    color: #333;
+}
+
+/* Comment Text */
+.fullpost-comment-box p {
+    margin: 5px 0;
+}
+
+/* Specifically the comment content (2nd <p> tag) */
+.fullpost-comment-box p:nth-child(2) {
+    font-size: 18px; 
+    font-weight: 500;
+    color: #222;
+}
+
+/* Comment Time */
+.fullpost-comment-time {
+    font-size: 11px;
+    color: #888;
+}
+
+
+/* Comment form styles */
+.fullpost-comment-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Reduce the gap between elements in the form */
+    margin-bottom: 5px; /* Add a smaller margin below the form */
+}
+
+.fullpost-comment-form label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.fullpost-comment-form textarea {
+    width: 90%;
+    min-height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    resize: vertical;
+}
+
+.fullpost-comment-form button {
+    width: fit-content;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    font-size: 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.fullpost-comment-form button:hover {
+    background-color: #0056b3;
+}
+
+body {
+    padding-top: 90px; 
+    overflow-y: scroll; 
+    scrollbar-width: none; 
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.posts-page::-webkit-scrollbar {
+    display: none;
+}
+
+/* Contact Form Input Fields */
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+    width: 100%; /* Ensure all input fields take up the same width */
+    padding: 10px; /* Add consistent padding */
+    margin-bottom: 15px; /* Add spacing between fields */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 5px; /* Add rounded corners */
+    font-size: 16px; /* Ensure consistent font size */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+
+/* Contact Form Textarea */
+#contact-form textarea {
+    resize: none; /* Disable resizing for consistent layout */
+}

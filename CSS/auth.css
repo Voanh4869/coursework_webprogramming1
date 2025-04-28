@@ -1,0 +1,238 @@
+#error-message {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    background: #ffe6e6;
+    padding: 8px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px; 
+    transition: opacity 1s ease-out;
+}
+
+/* Hide error smoothly when needed */
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Wrapper for the entire page */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.auth-wrapper {
+    min-height: 100%;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 30px; /* or 80px depending on how high you want */
+    padding-bottom: 50px; /* add bottom gap */
+    background: linear-gradient(to right, #e3f2fd, #bbdefb);
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+
+/* Page Header */
+.page-header {
+    text-align: center;
+    margin-bottom: 20px; /* Reduced margin to bring it closer to the container */
+}
+
+.page-header h1 {
+    font-size: 32px;
+    color: #007bff; /* Primary blue */
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+    max-width: 600px; /* Limit the width for better readability */
+    margin: 0 auto;
+}
+
+/* Login/Register form container */
+.auth-container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 360px;
+}
+
+/* Title styling */
+.form-title {
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #007bff; /* Primary blue */
+}
+
+/* Input group styling */
+.input-group {
+    position: relative;
+    margin: 15px 0;
+}
+
+/* Input field styling */
+.input-group input {
+    width: 100%;
+    padding: 12px 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background: #f9f9f9;
+    box-sizing: border-box;
+}
+
+/* Left icons (user, lock, etc.) */
+.input-group i:first-child {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #888;
+}
+
+/* Password toggle icon */
+.input-group #togglePassword,
+.input-group #toggleConfirmPassword {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: #888;
+}
+
+.input-group #togglePassword:hover,
+.input-group #toggleConfirmPassword:hover {
+    color: #555;
+}
+
+/* Recover password link */
+.recover {
+    text-align: right;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.recover a {
+    text-decoration: none;
+    color: #007bff; /* Primary blue */
+}
+
+.recover a:hover {
+    text-decoration: underline;
+    color: #0056b3; /* Darker blue */
+}
+
+/* Sign-in/Sign-up button */
+.btn {
+    background: #007bff; /* Primary blue */
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0056b3; /* Darker blue */
+}
+
+/* OR separator */
+.or {
+    margin: 20px 0;
+    text-align: center;
+    color: #aaa;
+    font-size: 14px;
+}
+
+/* Social authentication icons */
+.auth-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    text-decoration: none;
+}
+
+.auth-icons a {
+    text-decoration: none; /* Removes underline */
+    display: inline-block; /* Ensures it wraps around the icon properly */
+}
+
+.aut.auth-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    text-decoration: none;
+}
+
+.auth-icons a {
+    text-decoration: none; /* Removes underline */
+    display: inline-block; /* Ensures it wraps around the icon properly */
+}
+
+
+.auth-icons i {
+    border: 1px solid #ccc;
+    background: white;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 22px;
+    color: #555;
+    transition: 0.3s;
+text-decoration: none;
+}
+
+.auth-icons i:hover {
+    background: #007bff; 
+}
+
+/* Sign-up section */
+.auth-links {
+    margin-top: 10px;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.auth-links p {
+    margin-bottom: 5px;
+}
+
+.auth-links a button {
+    background: transparent;
+    border: 1px solid #007bff; /* Primary blue */
+    color: #007bff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.auth-links a button:hover {
+    background: #007bff; /* Primary blue */
+    color: white;
+}
+
